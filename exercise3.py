@@ -25,7 +25,7 @@ class Rectangle:
     def upper_right(self) -> Point2D:
         return self.corner(3)
         
-    def is_between(value, lower, upper):
+    def is_between(self, value, lower, upper):
         return value >= lower and value <= upper
 
     def contains(self, point: Point2D, tolerance = 0) -> bool:
