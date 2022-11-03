@@ -10,6 +10,11 @@ class Point2D:
         self._coordinates[0] -= other[0]
         self._coordinates[1] -= other[1]
         return self
+    
+    def __iadd__(self, other: Vector):
+        self._coordinates[0] += other[0]
+        self._coordinates[1] += other[1]
+        return self
 
     @property
     def x(self) -> float:
