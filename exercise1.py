@@ -1,13 +1,14 @@
 from __future__ import annotations
 from typing import List
 from math import isclose
+from copy import deepcopy
 
 # Task A: see comment in function `test_vector_index_access`
 # Task B: see comment in function `test_3d_vector_subtraction`
 
 class Vector:
     def __init__(self, coordinates: List[float]) -> None:
-        self._coordinates = coordinates
+        self._coordinates = deepcopy(coordinates)
 
     def __getitem__(self, i: int) -> float:
         return self._coordinates[i]
