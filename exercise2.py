@@ -6,6 +6,11 @@ class Point2D:
     def __init__(self, x: float, y: float) -> None:
         self._coordinates = Vector([x, y])
 
+    def __isub__(self, other: Vector):
+        self._coordinates[0] -= other[0]
+        self._coordinates[1] -= other[1]
+        return self
+    
     def __iadd__(self, other: Vector):
         self._coordinates[0] += other[0]
         self._coordinates[1] += other[1]
